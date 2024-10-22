@@ -8,7 +8,7 @@ class Categorias {
     private $columnasBD=['id_categoria', 'categoria', 'descripcion'];
 
     public function __construct($args = []) {
-        $this->id=$args['id_categoria'] ?? null;
+        $this->id_categoria=$args['id_categoria'] ?? null;
         $this->categoria=$args['categoria'] ?? '';
         $this->descripcion=$args['descripcion'] ?? '';
     }
