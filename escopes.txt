@@ -1,0 +1,71 @@
+Frontend
+Vistas
+API ()
+
+
+Backend
+API
+    json_encode(
+        1{
+            usuario{
+                alexis1
+            },
+            psswd{
+                12345
+            }
+        }
+    )
+---------    
+CRUD
+CREATE
+REMOVE
+UPDATE
+DELETE
+--------
+
+--------------LOGIN--------------------
+Alexis
+
+    Backend:
+        Desarrollo de las API para la autenticación de usuarios (login) y gestión de sesiones.
+        Implementación del CRUD de productos, incluyendo la lógica para agregar, editar y eliminar productos.
+        Implementación de las funciones para gestionar pedidos y facturas.
+
+    Frontend:
+        Creación de las vistas para el login y el catálogo de productos.
+        Integración de las APIs en las vistas para mostrar datos dinámicamente.
+
+Mariel
+
+    Backend:
+        Desarrollo de la lógica para la gestión de empleados, incluyendo el CRUD de empleados.
+        Implementación de las rutas para las APIs que permitan la comunicación entre el frontend y el backend.
+
+    Frontend:
+        Diseño y creación de las vistas para las ventas físicas y la tabla de pedidos.
+        Implementación de la funcionalidad de filtros en la tabla de pedidos.
+
+Juan Pablo
+
+    Backend:
+        Configuración de la base de datos y creación de las tablas necesarias para la aplicación.
+        Desarrollo de la lógica de negocio para la gestión de facturas y pedidos.
+
+    Frontend:
+        Creación de las vistas para "My Orders" y "Facturas".
+        Integración de las APIs en el frontend para mostrar información de pedidos y facturas.
+
+Proceso general
+
+    Configuración de Rutas:
+        En el index.php, establecer las rutas para cada vista utilizando el patrón MVC.
+        Asegurarse de que las rutas apunten a los controladores correctos.
+
+    Desarrollo de la Vista:
+        Crear las vistas HTML/CSS/JS para cada uno de los roles de usuario.
+        Utilizar AJAX o fetch para conectar las vistas con las APIs del backend.
+
+    Aprendizaje en equipo:
+        Realizar sesiones de pair programming para que todos aprendan tanto el backend como el frontend.
+        Compartir los conocimientos adquiridos y hacer revisiones de código entre los integrantes del equipo.
+----------------------------------
