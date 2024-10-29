@@ -105,19 +105,20 @@ CREATE TABLE `empleados` (
   `nombre` varchar(100) DEFAULT NULL,
   `puesto` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `telefono` bigint(20) DEFAULT NULL
+  `telefono` bigint(20) DEFAULT NULL,
+  'password' varchar(10) NOT NULL --contraseña
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `empleados` (`id_empleado`, `nombre`, `puesto`, `email`, `telefono`) VALUES
-(100, 'Pedro Ramírez', 'Gerente', 'pedro.ramirez@example.com', 5551239988),
-(101, 'Laura González', 'Vendedor', 'laura.gonzalez@example.com', 5552345678),
-(102, 'Santiago Torres', 'Soporte', 'santiago.torres@example.com', 5558765432),
-(103, 'Daniela Jiménez', 'Cajero', 'daniela.jimenez@example.com', 5553332221),
-(104, 'Andrés Morales', 'Almacén', 'andres.morales@example.com', 5551123344);
+INSERT INTO `empleados` (`id_empleado`, `nombre`, `puesto`, `email`, `telefono`, 'password') VALUES
+(100, 'Pedro Ramírez', 'Gerente', 'pedro.ramirez@example.com', 5551239988, 1234),
+(101, 'Laura González', 'Vendedor', 'laura.gonzalez@example.com', 5552345678, 5678),
+(102, 'Santiago Torres', 'Soporte', 'santiago.torres@example.com', 5558765432, 9123),
+(103, 'Daniela Jiménez', 'Cajero', 'daniela.jimenez@example.com', 5553332221, 4567),
+(104, 'Andrés Morales', 'Almacén', 'andres.morales@example.com', 5551123344, 8912);
 
 -- --------------------------------------------------------
 
