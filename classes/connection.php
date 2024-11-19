@@ -1,18 +1,23 @@
 <?php
-$servername = "localhost"; // Adjust as necessary
-$username = "root";        // Default for XAMPP
-$password = "";            // Default for XAMPP
-$dbname = "project"; // Your actual database name
+namespace classes;
 
-try {
-    $con = mysqli_connect($servername, $username, $password, $dbname);
-    
-    if (!$con) {
-        throw new Exception("Connection failed: " . mysqli_connect_error());
+class Connection {
+    private $servername = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $dbname = "project";
+    public $conn;
+
+    public function connect() {
+        // Crear conexión
+        $this->conn = new \mysqli($this->servername, $this->username, $this->password, $this->dbname); // Añade el \ aquí
+
+        // Verificar la conexión
+        if ($this->conn->connect_error) {
+            die("Conexión fallida: " . $this->conn->connect_error);
+        }
+
+        return $this->conn;
     }
-} catch (Exception $e) {
-    echo "Error al conectar con la base de datos: " . $e->getMessage();
-    $con = null;
 }
-return $con;
 ?>

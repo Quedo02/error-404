@@ -1,14 +1,15 @@
 <?php
+namespace Model;
 
-class Empleado {
-    private $id_empleado;
-    private $nombre;
-    private $puesto;
-    private $email;
-    private $telefono;
-    private $password
-    private $tabla='empleados';
-    private $columnasBD=['id_empleado','nombre','puesto','email','telefono','password'];
+class Empleado extends ActiveRecord {
+    public $id_empleado;
+    public $nombre;
+    public $puesto;
+    public $email;
+    public $telefono;
+    public $password;
+    protected static $tabla='empleados';
+    public $columnasBD=['id_empleado','nombre','puesto','email','telefono','password'];
 
     public function __construct($args = []) {
         $this->id_empleado=$args['id_empleado'] ?? null;

@@ -1,6 +1,6 @@
 <?php
-
-class Productos{
+namespace Model;
+class Productos extends ActiveRecord{
     private $id_producto;
     private $producto;
     private $descripcion;
@@ -8,7 +8,7 @@ class Productos{
     private $stock;
     private $id_categoria;
     private $id_proveedor;
-    private $tabla='productos';
+    protected static $tabla='productos';
     private $columnasBD=['id_producto','producto','descripcion','precio','stock','id_categoria', 'id_provedor'];
 
     public function __construct($args = []) {

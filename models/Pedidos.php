@@ -1,11 +1,11 @@
 <?php
-
-class Pedidos{
+namespace Model;
+class Pedidos extends ActiveRecord{
     private $id_pedido;
     private $fecha;
     private $id_clientes;
     private $total;
-    private $tabla='pedidos';
+    protected static $tabla='pedidos';
     private $columnasBD=['id_pedido','fecha','id_clientes','total'];
 
     public function __construct($args=[]){
