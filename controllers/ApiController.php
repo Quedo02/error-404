@@ -1,8 +1,6 @@
 <?php
 namespace Controllers;
 use MVC\Router;
-require_once __DIR__ . '/../includes/App.php'; // Asegúrate de que esto se llame primero
-
 
 class ApiController {
     public static function get(Router $router, $modelo){

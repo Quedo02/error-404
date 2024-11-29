@@ -9,7 +9,7 @@ class Pedidos extends ActiveRecord{
     private $columnasBD=['id_pedido','fecha','id_clientes','total'];
 
     public function __construct($args=[]){
-        $this->id_pedido=$args['is_pedido'] ?? null;
+        $this->id_pedido=$args['id_pedido'] ?? null;
         $this->fecha=$args['fecha'] ?? null;
         $this->id_clientes['id_clientes'] ?? null;
         $this->total['total'] ?? null;

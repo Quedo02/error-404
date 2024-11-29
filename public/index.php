@@ -6,7 +6,7 @@ use Middlewares\CorsMiddleware;
 use Controllers\LoginController;
 use Controllers\ApiController;
 
-$viewLoader = new ViewLoader(__DIR__ . '/../views');
+$viewLoader = new ViewLoader(__DIR__ . '/../frontend');
 $router = new Router($viewLoader);
 
 // API

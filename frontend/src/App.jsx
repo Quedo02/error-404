@@ -1,9 +1,11 @@
 import React from "react";
-import Login from "./Login";
+import Navbar from "./Components/Navbar.jsx";
 
 const App = () => {
   return (
-      <Login />
+      <div className="App">
+      <Navbar />
+      </div>
   );
 };
 

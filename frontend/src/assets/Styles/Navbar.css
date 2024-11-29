@@ -1,0 +1,34 @@
+/* General Navbar Styles */
+.navbar {
+    background-color: #0693e3;; /* Fondo oscuro */
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar img {
+    height: 75px; /* Tamaño del logo */
+}
+
+.pages{
+    
+}
+
+.icons{
+
+}
+
+li{
+    margin-right: 20px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

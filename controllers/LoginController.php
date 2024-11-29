@@ -10,25 +10,61 @@ class LoginController {
         self::$secret_key = $_ENV['jwt_secret_key']; // Asignar la clave secreta
     }
     public static function index() {
-        self::init();
+        self::init(); // Inicializar la clave secreta
         session_start();
         $errors = [];
+    
         // Verificar si es una solicitud POST
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             http_response_code(405); // Método no permitido
+            echo json_encode(['code' => 405, 'message' => 'Method not allowed']);
             exit;
         }
+    
         // Leer y validar datos del formulario
         $data = json_decode(file_get_contents('php://input'), true);
+    
         if (empty($data['username']) || empty($data['password'])) {
             $errors[] = 'Username and Password are required';
         }
+    
         if (!empty($errors)) {
-            http_response_code(400);
+            http_response_code(400); // Bad Request
             echo json_encode(['code' => 400, 'errors' => $errors]);
             exit;
         }
-    }
+    
+        // Validar las credenciales del usuario usando el modelo
+        $username = $data['username'];
+        $password = $data['password'];
+    
+        // Llama al modelo para verificar las credenciales
+        // Asegúrate de importar tu modelo en este controlador
+        $user = \Model\Usuarios::validateUser($username, $password);
+    
+        if (!$user) {
+            http_response_code(401); // Unauthorized
+            echo json_encode(['code' => 401, 'message' => 'Invalid username or password']);
+            exit;
+        }
+    
+        // Si el usuario es válido, guardar datos en la sesión
+        self::setSession($user);
+    
+        // Generar el token JWT
+        $token = self::generateJWT();
+    
+        // Establecer el token como cookie
+        self::setAuthCookie($token);
+    
+        // Responder al cliente con éxito y el token
+        http_response_code(200); // OK
+        echo json_encode([
+            'code' => 200,
+            'message' => 'Login successful',
+            'token' => $token
+        ]);
+    }    
     public static function validateToken($token) {
         self::init();
         try {
