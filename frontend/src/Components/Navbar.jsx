@@ -1,13 +1,13 @@
 import React from 'react';
 import '../assets/Styles/Navbar.css';
 import logo from '../assets/Images/logo.png'
-import login from '../assets/Images/login.png'
-import carrito from '../assets/Images/carrito.png'
+import login from '../assets/Images/login.svg'
+import carrito from '../assets/Images/carrito.svg'
 
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <img src={logo} alt="LoboSimulador" />
+            <a href="#"><img src={logo} alt="LoboSimulador" /></a>
             <ul className='pages'>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">¿Quiénes somos?</a></li>

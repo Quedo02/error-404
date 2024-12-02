@@ -1,2 +1,9 @@
 /* Este archivo es para todo lo que afecta globalmente a la aplicación. */
 
+/*Fuente personalizada */
+@font-face {
+    font-family: 'fuente_general'; /* Nombre de la fuente que usarás en CSS */
+    src: url('../Fonts/Roboto-Regular.ttf') format('ttf');  /* Fuente en formato WOFF */
+    font-weight: normal; /* Peso de la fuente (normal o bold) */
+    font-style: normal;  /* Estilo de la fuente (normal o italic) */
+}
