@@ -1,7 +1,0 @@
-.catalogo-container {
-    display: grid; /* Usamos grid para organizar los productos */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas dinámicas */
-    gap: 1.5rem; /* Espaciado entre productos */
-    padding: 2rem; /* Espaciado interno del contenedor */
-    background-color: #f8f9fa; /* Fondo claro */
-}

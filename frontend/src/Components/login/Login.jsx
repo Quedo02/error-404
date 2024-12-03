@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "../assets/Styles/Login.css";
 
 const Login = () => {
@@ -21,14 +20,14 @@ const Login = () => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     console.log("Login Data:", loginData);
-    // Aquí iría la lógica para conectar con el backend (fetch o axios)
+    // Aquí iría la lógica para conectar con el backend
   };
 
   // Manejo del envío del formulario de Sign Up
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
     console.log("Signup Data:", signupData);
-    // Aquí iría la lógica para conectar con el backend (fetch o axios)
+    // Aquí iría la lógica para conectar con el backend
   };
 
   return (
@@ -60,7 +59,7 @@ const Login = () => {
           <input
             type="number"
             name="broj"
-            placeholder="BrojTelefona"
+            placeholder="Phone Number"
             value={signupData.broj}
             onChange={(e) => handleChange(e, "signup")}
             required
